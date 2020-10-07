@@ -11,6 +11,11 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
+
+RUN apk add python3
+RUN apk add build-base
+RUN npm install node-gyp
+
 RUN npm install
 RUN npm run build
 
