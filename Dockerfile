@@ -19,10 +19,9 @@ RUN npm install node-gyp
 RUN npm install
 RUN npm run build
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 4000
 
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=80
+ENV NUXT_PORT=4000
 
 CMD [ "npm", "start" ]
