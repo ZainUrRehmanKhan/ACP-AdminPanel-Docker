@@ -1,4 +1,4 @@
-#Dockerfile
+ #Dockerfile
 FROM node:14.13.0-alpine
 
 # create destination directory
