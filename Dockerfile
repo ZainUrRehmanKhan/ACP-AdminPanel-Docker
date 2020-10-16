@@ -5,7 +5,7 @@ FROM node:12.18.4-alpine3.10
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 
-COPY package.json package-lock*.json ./
+COPY package.json package-lock*.json /usr/src/nuxt-app/
 
 # update and install dependency
 RUN apk update && apk upgrade
