@@ -1,9 +1,11 @@
  #Dockerfile
-FROM node:14.13.0-alpine
+FROM node:12.18.4-alpine3.10
 
 # create destination directory
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
+
+COPY package.json package-lock*.json ./
 
 # update and install dependency
 RUN apk update && apk upgrade
