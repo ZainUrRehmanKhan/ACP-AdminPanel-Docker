@@ -83,8 +83,8 @@ export default {
    */
   axios: {
     // baseURL: 'http://139.59.73.151:3000'
-    // baseURL: 'http://192.168.100.100:3000'
-    baseURL: 'https://api.acpshopping.com'
+    baseURL: 'http://acp-api:3000'
+    // baseURL: 'https://api.acpshopping.com'
   },
   /*
    ** vuetify module configuration
