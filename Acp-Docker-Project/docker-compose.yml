@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  nginx-main:
+    container_name: nginx-server
+    image: my_nginx
+    ports:
+      - 4000:4000
+      - 3000:3000
+    depends_on:
+      - acp-admin
+      - acp-api
+    links:
+      - acp-admin
+      - acp-api
+
+  acp-admin:
+    container_name: acp-admin
+    image: acp-admin-image
+    ports:
+      - 4000
+    working_dir: /usr/src/nuxt-app
+    command: npm start
+
+  acp-api:
+    container_name: acp-api
+    image: acp-api-image
+    volumes:
+      - /usr/src/app/node_modules
+    working_dir: /usr/src/app
+    ports: 
+      - 3000
+    command: npm run start:dev
+    depends_on:
+      - mongodb-service
+    links:
+      - mongodb-service
+
+  mongodb-service:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017
+    volumes:
+      - ./data:/data/db

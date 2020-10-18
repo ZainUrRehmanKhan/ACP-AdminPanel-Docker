@@ -83,7 +83,7 @@ export default {
    */
   axios: {
     // baseURL: 'http://139.59.73.151:3000'
-    baseURL: 'http://acp-api:3000'
+    baseURL: 'http://209.182.217.107:3000'
     // baseURL: 'https://api.acpshopping.com'
   },
   /*
@@ -134,6 +134,9 @@ export default {
         // autoFetchUser: true
       }
     }
+  },
+  server: {
+    host: '0.0.0.0'
   },
   router: {
     middleware: ['auth']

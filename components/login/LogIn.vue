@@ -36,6 +36,7 @@
         >
       </v-card>
     </v-form>
+    <p>{{$axios.defaults.baseURL}}</p>
     <v-snackbar
       v-model="snackbar"
       bottom
@@ -70,7 +71,6 @@ export default {
       if (this.$refs.form.validate()) {
         try {
           this.disable = true
-
           if (this.$auth.loggedIn) return
           await this.$auth.loginWith('local', {
             data: this.login
