@@ -83,7 +83,7 @@ export default {
    */
   axios: {
     // baseURL: 'http://139.59.73.151:3000'
-    baseURL: 'http://localhsot:3000'
+    baseURL: 'http://localhsot:5000'
     // baseURL: 'https://api.acpshopping.com'
   },
   /*
